@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ForecastWeatherApp.DetailsPage"
+             Title="DetailsPage">
+    <StackLayout>
+        <Label Text="Weather Details" FontAttributes="Bold" HorizontalOptions="Center" Margin="0,20,0,10" />
+        <Label Text="{Binding Date}" FontSize="Large" FontAttributes="Bold" HorizontalOptions="Center" />
+        <Label Text="{Binding MinTemperatureC, StringFormat='Min Temperature: {0}°C'}" HorizontalOptions="Center" />
+        <Label Text="{Binding MaxTemperatureC, StringFormat='Max Temperature: {0}°C'}" HorizontalOptions="Center" />
+        <Button Text="Back" Clicked="BackButton_Clicked" HorizontalOptions="Center" Margin="0,20,0,0" />
+    </StackLayout>
+</ContentPage>
