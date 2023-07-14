@@ -3,11 +3,22 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ForecastWeatherApp.DetailsPage"
              Title="DetailsPage">
-    <StackLayout>
-        <Label Text="Weather Details" FontAttributes="Bold" HorizontalOptions="Center" Margin="0,20,0,10" />
-        <Label Text="{Binding Date}" FontSize="Large" FontAttributes="Bold" HorizontalOptions="Center" />
-        <Label Text="{Binding MinTemperatureC, StringFormat='Min Temperature: {0}°C'}" HorizontalOptions="Center" />
-        <Label Text="{Binding MaxTemperatureC, StringFormat='Max Temperature: {0}°C'}" HorizontalOptions="Center" />
-        <Button Text="Back" Clicked="BackButton_Clicked" HorizontalOptions="Center" Margin="0,20,0,0" />
-    </StackLayout>
+
+
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="Transparent">
+            <StackLayout.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Offset="0" Color="LimeGreen" />
+                    <GradientStop Offset="1" Color="Blue" />
+                </LinearGradientBrush>
+            </StackLayout.Background>
+
+            <Label Text="Weather Details" FontAttributes="Bold" HorizontalOptions="Center" Margin="0,20,0,10" />
+            <Label Text="{Binding Date}" FontSize="Large" FontAttributes="Bold" HorizontalOptions="Center" />
+            <Label Text="{Binding MinTemperatureC, StringFormat='Min Temperature: {0}°C'}" HorizontalOptions="Center" />
+            <Label Text="{Binding MaxTemperatureC, StringFormat='Max Temperature: {0}°C'}" HorizontalOptions="Center" />
+            <Button Text="Back" Clicked="BackButton_Clicked" HorizontalOptions="Center" Margin="0,20,0,0" />
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>
